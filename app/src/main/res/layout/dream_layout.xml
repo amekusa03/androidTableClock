@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dream_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/night_sky_bg">
+
+    <FrameLayout
+        android:id="@+id/star_field"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/clock_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/dream_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="180sp"
+            android:fontFamily="sans-serif-thin"
+            android:includeFontPadding="false"
+            android:shadowColor="#80000000"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:text="00:00" />
+
+        <TextView
+            android:id="@+id/dream_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#CCFFFFFF"
+            android:textSize="32sp"
+            android:layout_marginTop="-20dp"
+            android:text="Monday, Jan 1" />
+
+        <TextView
+            android:id="@+id/alarm_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFEB3B"
+            android:textSize="24sp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="8dp"
+            android:visibility="gone"
+            android:text="Alarm: 07:00" />
+    </LinearLayout>
+
+</FrameLayout>
