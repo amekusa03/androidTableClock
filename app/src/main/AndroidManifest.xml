@@ -10,20 +10,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
+        <!-- 
+            スクリーンセーバー本体（DreamService）の実装定義。
+            android:permission="android.permission.BIND_DREAM_SERVICE" 
+            は、システムのみがこのサービスを起動できるようにするために必須のセキュリティ設定です。
+        -->
         <service
             android:name=".MyDreamService"
             android:exported="true"
             android:label="My ScreenSaver"
             android:permission="android.permission.BIND_DREAM_SERVICE">
+            
+            <!-- システムがこのアプリを「スクリーンセーバー」の一覧に表示するために必要なインテントフィルタ -->
             <intent-filter>
                 <action android:name="android.service.dreams.DreamService" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
+            <!-- 
+                スクリーンセーバーの追加情報（設定画面の指定やプレビューの有無など）を定義した
+                xmlファイルを指定します。
+            -->
             <meta-data
                 android:name="android.service.dream"
                 android:resource="@xml/dream_info" />
         </service>
 
+        <!-- 
+            アプリをランチャーから直接開いた時のメイン画面。
+            スクリーンセーバーは設定が分かりにくいため、この画面からシステムの
+            設定ページへユーザーを誘導するようにしています。
+        -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

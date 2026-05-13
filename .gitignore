@@ -8,6 +8,9 @@
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 /.idea/deploymentTargetDropDown.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/deviceManager.xml
+/.idea/vcs.xml
 .DS_Store
 /build
 /captures
@@ -42,3 +45,6 @@ text:/.gitignore
 *.dm
 *.apk
 GEMINI.md
+
+# Claude Code
+.claude/settings.local.json
