@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:textSize="180sp"
+            android:textSize="140sp"
             android:fontFamily="sans-serif-thin"
             android:includeFontPadding="false"
             android:shadowColor="#80000000"
